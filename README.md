@@ -71,7 +71,44 @@ y una vez tengas todo lo necesario puedes "compilar" tu app, y si todo sale bien
 flet pack app.py
 
 ```
+y esto generara un una carpeta dist en esta estara el ejecutable
 
+### Documentacion extra
+
+Introducción
+Esta aplicación implementa un chatbot y un generador de imágenes a partir de texto utilizando la API de OpenAI y la librería flet.
+
+Requerimientos
+Antes de utilizar esta aplicación se deben instalar los siguientes paquetes en Python:
+
+openai
+flet
+Además, se debe contar con una clave de API de OpenAI para poder utilizar los servicios de la API. La clave de API debe ser almacenada en la variable key en el archivo app.py.
+
+Uso
+La aplicación cuenta con dos interfaces: una para generar imágenes a partir de texto y otra para utilizar el chatbot.
+
+ImageGenerator
+Para utilizar la interfaz del generador de imágenes se debe ejecutar el siguiente código:
+
+scss
+Copy code
+from app import imageApp
+
+app = imageApp()
+app.show()
+Una vez iniciada la aplicación, se debe ingresar una solicitud en el cuadro de texto y presionar el botón "Send". La aplicación generará una imagen a partir de la solicitud ingresada y la mostrará en la columna de solicitudes.
+
+ChatBot
+Para utilizar la interfaz del chatbot se debe ejecutar el siguiente código:
+
+scss
+Copy code
+from app import TodoApp
+
+app = TodoApp()
+app.show()
+Una vez iniciada la aplicación, se debe ingresar una tarea en el cuadro de texto y presionar el botón "Send". La aplicación utilizará el chatbot de OpenAI para generar una respuesta a la tarea ingresada y la mostrará en la columna de tareas.
 
 
 
